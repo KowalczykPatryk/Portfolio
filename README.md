@@ -1,4 +1,3 @@
 # Portfolio
-Personal website and developer portfolio — includes my CV, projects, and more.
 
-[Live website](https://kowalczykpatryk.github.io/portfolio/)
+Personal website and developer portfolio — includes my CV, projects and gathers links.
