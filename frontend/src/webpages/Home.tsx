@@ -1,37 +1,22 @@
-import { useState } from "react";
-import { Snackbar, Alert } from "@mui/material";
-
-type Notification = {
-    open: boolean;
-    message: string;
-    severity: "success" | "info" | "warning" | "error";
-};
+import ProfilePictureBox from "../components/ProfilePictureBox";
+import SocialsTop from "../components/SocialsTop";
+import profileImage from "../img/profile_image_placeholder.avif";
+import githubLogo from "../img/GitHub-logo.png";
+import linkedInLogo from "../img/LinkedIn-Logo.png";
 
 function Home(): React.JSX.Element
 {
 
-    const [notification, setNotification] = useState<Notification>({
-        open: false,
-        message: "",
-        severity: "success"
-    });
-
     return (
         <>
-            <Snackbar
-            open={notification.open}
-            autoHideDuration={3000}
-            onClose={() => setNotification({...notification, open: false})}
-            anchorOrigin={{ vertical: "bottom", horizontal: "right" }}
-            >
-                <Alert 
-                onClose={() => setNotification({...notification, open: false})} 
-                severity={notification.severity} 
-                variant="filled"
-                >
-                    {notification.message}
-                </Alert>
-            </Snackbar>
+            <SocialsTop socialsInfo={[
+                {imagePathName: githubLogo, socialPlatformName: "Github", url: "https://github.com/KowalczykPatryk"},
+                {imagePathName: linkedInLogo, socialPlatformName: "LinkedIn", url: "https://www.linkedin.com/in/patryk-kowalczyk-3a90b6320/"}
+
+            ]} />
+            <div className="p-4">
+                <ProfilePictureBox imagePathName={profileImage} fullName="Kowalczyk Patryk" socialRoles={["Student"]} />
+            </div>
         </>
     );
 }
