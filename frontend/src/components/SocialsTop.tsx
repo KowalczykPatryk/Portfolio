@@ -15,13 +15,13 @@ function SocialsTop({socialsInfo}: SocialsProps)
 {
     const socialImages = socialsInfo.map(socialInfo => 
         <div key={socialInfo.imagePathName}>
-            <a href={socialInfo.url}><img className="h-8" src={socialInfo.imagePathName} alt={socialInfo.socialPlatformName} /></a>
+            <a href={socialInfo.url}><img className="h-6" src={socialInfo.imagePathName} alt={socialInfo.socialPlatformName} /></a>
         </div>
     );
 
     return (
         <>
-            <div className="gap-2 p-4 bg-white absolute top-1 right-1 mx-auto flex flex-row ">
+            <div className="gap-2 p-4 bg-white flex flex-row border-double border-b-5 divide-x-3 divide-double">
                 {socialImages}
             </div>
         </>
