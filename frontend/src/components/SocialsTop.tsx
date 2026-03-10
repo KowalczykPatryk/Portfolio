@@ -15,7 +15,7 @@ function SocialsTop({socialsInfo}: SocialsProps)
 {
     const socialImages = socialsInfo.map(socialInfo => 
         <div key={socialInfo.imagePathName}>
-            <a href={socialInfo.url}><img className="h-6" src={socialInfo.imagePathName} alt={socialInfo.socialPlatformName} /></a>
+            <a href={socialInfo.url} target="_blank" rel="noreferrer"><img className="h-6" src={socialInfo.imagePathName} alt={socialInfo.socialPlatformName} /></a>
         </div>
     );
 

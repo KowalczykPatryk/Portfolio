@@ -9,5 +9,9 @@ Personal website and developer portfolio — includes my CV, projects and gather
 - TypeScript - static typing
 - Tailwind CSS - styling
 - Vite - development server and bundler
+- pdftoimg-js - converting pdf to png for preview
 
 ### Backend
+
+
+https://www.npmjs.com/package/pdftoimg-js

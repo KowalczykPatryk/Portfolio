@@ -27,9 +27,13 @@ function Home(): React.JSX.Element
                     />
                 </div>
             </div>
-            <div className="p-4 grid grid-cols-2 gap-4">
-                <ProfilePictureBox imagePathName={profileImage} fullName="Kowalczyk Patryk" socialRoles={["Student AGH Applied Computer Science"]} />
-                <CVBox />
+            <div className="p-4 flex flex-row gap-4 justify-center">
+                <div className="flex flex-col gap-4 ">
+                    <ProfilePictureBox imagePathName={profileImage} fullName="Kowalczyk Patryk" socialRoles={["Student AGH Applied Computer Science"]} />
+                </div>
+                <div className="flex flex-col gap-4">
+                    <CVBox />
+                </div>
             </div>
         </>
     );
